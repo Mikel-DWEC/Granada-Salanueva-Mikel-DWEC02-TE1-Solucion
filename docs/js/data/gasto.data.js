@@ -43,7 +43,7 @@ const jsonParseado = JSON.parse(jsonHistorico);
 //     GASTOS_DB.push(new GastoCombustible(id, vehiculo, fecha, kilometros,coste));
 // });
 
-// --- Utilizando el bucle iterador forEach() ---
+// --- Utilizando el bucle iterador map() ---
 
 export const GASTOS_DB = jsonParseado.map(element => {
     let id = element.id;
@@ -54,10 +54,6 @@ export const GASTOS_DB = jsonParseado.map(element => {
 
     return new GastoCombustible(id, vehiculo, fecha, kilometros, coste);
 
-});
-
-GASTOS_DB.forEach(element => {
-    console.log(element.vehicleType);
 });
 
 

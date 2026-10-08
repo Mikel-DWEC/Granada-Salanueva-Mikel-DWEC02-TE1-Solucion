@@ -2,8 +2,7 @@ import { GastoService } from "./services/gasto.service.js";
 
 console.log("Fichero main.js cargado correctamente");
 
-localStorage.clear();
-
+// Ejecutar la función almacenarGastos
 GastoService.almacenarGastos();
 
 

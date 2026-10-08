@@ -46,13 +46,15 @@ const jsonParseado = JSON.parse(jsonHistorico);
 // --- Utilizando el bucle iterador map() ---
 
 export const GASTOS_DB = jsonParseado.map(element => {
-    let id = element.id;
-    let vehiculo = element.vehicleType;
-    let fecha = new Date(element.date);
-    let kilometros = element.kilometers;
-    let coste = element.precioViaje;
-
-    return new GastoCombustible(id, vehiculo, fecha, kilometros, coste);
+    
+  return new GastoCombustible(element);
+    // Codigo anterior
+    // let id = element.id;
+    // let vehiculo = element.vehicleType;
+    // let fecha = new Date(element.date);
+    // let kilometros = element.kilometers;
+    // let coste = element.precioViaje;
+    //return new GastoCombustible(id, vehiculo, fecha, kilometros, coste);
 
 });
 

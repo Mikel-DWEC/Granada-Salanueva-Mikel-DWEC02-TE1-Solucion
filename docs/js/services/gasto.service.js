@@ -45,12 +45,14 @@ function procesarGasto(jsonNuevoGasto){
   let nuevoGastoParseado = JSON.parse(jsonNuevoGasto);
   
   // Creamos un objeto de la clase GastoCombustible
-  let id = nuevoGastoParseado.id;
-  let vehiculo = nuevoGastoParseado.vehicleType;
-  let fecha = new Date(nuevoGastoParseado.date);
-  let kilometros = nuevoGastoParseado.kilometers;
-  let coste = nuevoGastoParseado.precioViaje;
-  const nuevoGasto = new GastoCombustible(id, vehiculo, fecha, kilometros, coste);
+  const nuevoGasto = new GastoCombustible(nuevoGastoParseado);
+  // Codigo anterior
+  // let id = nuevoGastoParseado.id;
+  // let vehiculo = nuevoGastoParseado.vehicleType;
+  // let fecha = new Date(nuevoGastoParseado.date);
+  // let kilometros = nuevoGastoParseado.kilometers;
+  // let coste = nuevoGastoParseado.precioViaje;
+  // const nuevoGasto = new GastoCombustible(id, vehiculo, fecha, kilometros, coste);
 
   // Localizamos el año al que se refiere el gasto
   let anio = nuevoGasto.date.getFullYear();
